@@ -4,24 +4,18 @@ function Calculator(num1, num2) {
 	// this.operator = op;
 }
 
-Calculator.prototype.addition = function (num1, num2) {
-	var result = num1 + num2;
-	return result;
-};
+Calculator.prototype.calculation = function (num1, num2, operator) {
+	if (operator === "add") {
+		return num1 + num2;
+	} else if (operator === "subtract") {
+		return num1 - num2;
+	} else if (operator === "multiply") {
+		return num1 * num2;
+	} else if (operator === "divide") {
+		return num1 / num2;
+	} else {
+		console.log("ERROR! NO calculation  completed.");
+	}
+}
 
-Calculator.prototype.subtraction = function (num1, num2) {
-	var result = num1 - num2;
-	return result;
-};
-
-Calculator.prototype.multiplication = function (num1, num2) {
-	var result = num1 * num2;
-	return result;
-};
-
-Calculator.prototype.division = function (num1, num2) {
-	var result = num1 / num2;
-	return result;
-};
-
-exports.calculatorModule = Calculator;
+exports.calculationModule = Calculator;

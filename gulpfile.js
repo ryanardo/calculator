@@ -76,15 +76,6 @@ gulp.task('bowerCSS', function () {
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
 
-gulp.task('build', ['clean'], function () {
-	if (buildProduction) {
-		gulp.start('minifyScripts');
-	} else {
-		gulp.start('jsBrowserify');
-	}
-	gulp.start('bower');
-});
-
 gulp.task('serve', function () {
 	browserSync.init({
 		server: {
@@ -103,4 +94,13 @@ gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function () {
 
 gulp.task('bowerBuild', ['bower'], function () {
 	browserSync.reload();
+});
+
+gulp.task('build', ['clean'], function () {
+	if (buildProduction) {
+		gulp.start('minifyScripts');
+	} else {
+		gulp.start('jsBrowserify');
+	}
+	gulp.start('bower');
 });

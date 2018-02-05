@@ -1,6 +1,7 @@
-function Calculator(num1, num2) {
+function Calculator(num1, num2, operator) {
 	this.num1 = num1;
 	this.num2 = num2;
+	this.operator = operator;
 	// this.operator = op;
 }
 
@@ -18,4 +19,4 @@ Calculator.prototype.calculation = function (num1, num2, operator) {
 	}
 }
 
-exports.calculationModule = Calculator;
+exports.calculatorModule = Calculator;

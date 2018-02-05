@@ -9,7 +9,7 @@ $(document).ready(function () {
 		var calculator = new Calculator(num1, num2, operator);
 		var calculation = calculator.calculation(calculator);
 
-		$('#output').text(calculation);
+		$('#output').text(calculator.calculation(num1, num2, operator));
 
 	});
 });

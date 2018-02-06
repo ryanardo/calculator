@@ -26,7 +26,11 @@
 		"gulp-jshint": "^2.1.0",
 		"gulp-uglify": "^3.0.0",
 		"gulp-util": "^3.0.8",
+		"jasmine": "^2.9.0",
 		"jshint": "^2.9.5",
 		"vinyl-source-stream": "^2.0.0"
+	},
+	"scripts": {
+		"test": "jasmine"
 	}
 }
